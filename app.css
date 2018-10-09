@@ -1,0 +1,168 @@
+* {box-sizing: border-box;}
+
+body {
+    font-family: serif;
+    background-color: #F5F5F5;
+    color: #415F77;
+}
+
+.map {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    max-width: 1210px;
+    margin: 20px auto;
+    min-height: 600px;
+}
+
+.data{
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 20px auto;
+    text-align: center;
+}
+
+.data h2 {margin: 10px;}
+
+.data svg {max-width: 800px}
+
+.map__image {
+    position: absolute;
+   top: 20px;
+   right: 10px;
+   left:185px;
+   bottom: 0; 
+}
+
+.map__image svg {
+    width: 100%;
+    max-height: 600px;
+}
+
+.map__image path {
+    fill: #415F77;
+    stroke: #fff;
+    stroke-width: 1.2px;
+    transition: fill 0.3s;
+}
+
+.map__image .is-active path {fill: #FC5050;}
+
+.map__list ul, .map__list li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.map__list a {
+    padding-left: 10px;
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.map__list a.is-active {
+    color: #FC5050;
+    background-color: #f4f4f4;
+}
+
+ @media screen and (max-width: 710px){
+    .instructions {
+        float: none!important;
+        border-right: 0px!important;
+        width: auto!important;
+    }
+    .map__list {
+
+        width: 100%;
+       
+    }
+    .region-legend {
+        display: inline-block;
+    }
+
+    .map__legend{
+    margin-top: 0!important;
+    }
+    .map__image{
+        padding: 10px;
+        position: static;
+        width: 100%;
+    }
+} 
+
+
+ @media screen and (max-width: 570px){
+    .game-header max-width: 100px;} 
+
+.map__legend{margin-top: 145px;}
+
+/*game*/
+
+.goal {
+    color: red;
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+.instructions {
+    margin: 20px 0 0 20px;
+    float: left;
+    width: 200px;
+    border-right: 1px solid #dbdbdb;
+}
+
+.game-header {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+
+
+.map__image path:hover { fill: lightblue;}
+
+
+
+.region-color, .region-name{display: inline-block;}
+
+.region-name {
+    margin-left: 0.2rem;
+    margin-bottom: 1px;
+    color: black;
+    font-weight: black;
+
+}
+
+.region-color{
+    height: 1.2rem;
+    width: 1.2rem;
+    border: 1px solid black;
+    -moz-box-shadow: 1px 1px 5px 0px #656565;
+    -webkit-box-shadow: 1px 1px 5px 0px #656565;
+    -o-box-shadow: 1px 1px 5px 0px #656565;
+    box-shadow: 1px 1px 5px 0px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+}
+
+.r-c-1{     background-color: #f58231;}
+.r-c-2{     background-color: #bfef45;}
+.r-c-3{     background-color: #42d4f4;}
+.r-c-4{     background-color: #800000;}
+.r-c-5{     background-color: #911eb4;}
+.r-c-6{     background-color: #000075;}
+.r-c-7{     background-color: #e6beff;}
+.r-c-8{     background-color: #3cb44b;}
+.r-c-9{     background-color: #f032e6;}
+.r-c-10{    background-color: #aaffc3;}
+.r-c-11{    background-color: #4363d8;}
+.r-c-12{    background-color: #ffe119;}
+
+.region-color div {margin-left: 1.5rem;}
+
+.disabled {pointer-events: none;}
